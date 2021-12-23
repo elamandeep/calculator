@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Calculator app</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="theme1" id="changebg">  
+    <div class="calculator">
+        <div class="calculator-head">
+          <span id="headtext">calc</span>
+          <div class="toggle">
+            <span class="text">Theme</span>
+            <div class="toggle-box">
+              <div class="toggle-label">
+                <span id="theme_1">1</span>
+                <span id="theme_2">2</span>
+                <span id="theme_3">3</span>
+              </div>
+              <div class="toggle-circle"id="toggle-circle">    
+                <span class="circle"></span>
+              </div>  
+            </div>
+          </div>
+        </div>
+        <form class="calculator-mid">
+          <input type="text" id="num">
+        </form>
+        <div class="calculator-buttons">
+              <button class="key">7</button>
+              <button class="key">8</button>
+              <button class="key">9</button>
+              <button class="key" id="highlight">DEL</button>
+              <button class="key">4</button>
+              <button class="key">5</button>
+              <button class="key">6</button>
+              <button class="key">+</button>
+              <button class="key">1</button>
+              <button class="key">2</button>
+              <button class="key">3</button>
+              <button class="key">-</button>
+              <button class="key">.</button>
+              <button class="key">0</button>
+              <button class="key">/</button>
+              <button class="key">x</button>
+              <button class="key" id="reset">RESET</button>
+              <button class="key" id="equal">=</button>
+        </div>
+          
+
+    </div>
+</body>
+<script src="process.js"></script>
+<script src="toggle.js"></script>
+</html>

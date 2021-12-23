@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap');
+:root{
+
+    --font:'Spartan', sans-serif;
+    --blue1:hsl(222, 26%, 31%);
+    --blue2: hsl(223, 31%, 20%);
+    --blue3: hsl(224, 36%, 15%);
+    --blue-key1:hsl(225, 21%, 49%);
+    --blue-key2:hsl(224, 28%, 35%);
+    --red-key1: hsl(6, 63%, 50%);
+    --red-key2:hsl(6, 70%, 34%);
+    --white-key1:hsl(30, 25%, 89%);
+    --white-key2: hsl(28, 16%, 65%);
+    --text1:hsl(221, 14%, 31%);
+    --text2:white;
+    /* theme2 */
+    --gray1: hsl(0, 0%, 90%);
+    --gray2:hsl(0, 5%, 81%);
+    --gray3:hsl(0, 0%, 93%);
+    --cyan1:hsl(185, 42%, 37%);
+    --cyan2:hsl(185, 58%, 25%);
+    --orange1: hsl(25, 98%, 40%);
+    --orange2: hsl(25, 99%, 27%);
+    --gray4:hsl(45, 7%, 89%);
+    --gray5: hsl(35, 11%, 61%);
+    --gray6:hsl(60, 10%, 19%);
+   
+    /* theme 3 */
+    --violet1:hsl(268, 75%, 9%);
+    --violet2: hsl(268, 71%, 12%);
+    --violet3:hsl(281, 89%, 26%);
+    --violet4:hsl(285, 91%, 52%);
+    --darkcyan1: hsl(176, 100%, 44%);
+    --darkcyan2:hsl(177, 92%, 70%);
+    --violet5:hsl(268, 47%, 21%);
+    --violet6: hsl(290, 70%, 36%);
+    --light1:hsl(52, 100%, 62%);
+    --light2:hsl(198, 20%, 13%);
+   
+}
+
+.theme1{
+    --mainbg:var(--blue1);
+    --keypad:var(--blue2);
+    --screen:var(--blue3);
+    --highligted-keybg:var(--blue-key1);
+    --highligted-keyshadow:var(--blue-key2);
+    --hightligted-key:var(--red-key1);
+    --hightligted-shadow:var(--red-key2);
+    --primary-key:var(--white-key1);
+    --primary-keyshadow:var(--white-key2);
+    --text-color:var(--text1);
+    
+}
+.theme2{
+    --mainbg:var(--gray1);
+    --keypad:var(--gray2);
+    --screen:var(--gray3);
+    --highligted-keybg:var(--cyan1);
+    --highligted-keyshadow:var(--cyan2);
+    --hightligted-key:var(--orange1);
+    --hightligted-shadow:var(--orange2);
+    --primary-key:var(--gray4);
+    --primary-keyshadow:var(--gray5);
+    --text-color:var(--gray6);
+    --text-color1:var(--text2);
+}
+
+.theme3{
+    --mainbg:var(--violet1);
+    --keypad:var(--violet2);
+    --screen:var(--violet2);
+    --highligted-keybg:var(--violet3);
+    --highligted-keyshadow:var(--violet4);
+    --hightligted-key:var(--darkcyan1);
+    --hightligted-shadow:var(--darkcyan2);
+    --primary-key:var(--violet5);
+    --primary-keyshadow:var(--violet6);
+    --text-color:var(--light1);
+    --text-color1:var(--text2);
+}
+
+*{
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;        
+}
+
+body{
+    height: 90vh;
+    background-color: var(--mainbg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family:var(--font);
+    color:var(--text-color);
+    
+}
+.calculator{
+    width: 25rem;
+    display: flex;
+    flex-direction: column;
+}
+.calculator-head{
+    display: flex;
+    justify-content: space-between;
+}
+#headtext{
+    font-size: 1.5rem;
+    color: currentColor;
+}
+.toggle{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+}
+
+#theme_1,#theme_2,#theme_3{
+    display: block;
+    cursor: pointer;
+}
+
+.toggle-box{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+.toggle-label{
+    display: flex;
+    justify-content: space-between;
+}
+#toggle-circle{
+    background-color: var(--keypad);
+    width: 3rem;
+    height:1rem;
+    border-radius: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.circle{
+    border-radius: 50%;
+    height: 0.8rem;
+    width: 0.8rem;
+    background-color: var(--hightligted-key);
+}
+.calculator-mid input{
+    background: var(--screen);
+    border: none;
+    border-radius: 10px;
+    height: 5rem;
+    width: 25rem;
+    margin: 20px 0px;
+    font-size: 2rem;
+    color: inherit;
+    text-align: right;
+    padding: 10px;
+    font-family:var(--font) ;
+    font-weight: 700;
+}
+
+.calculator-buttons{
+    width: 25rem;
+    height: 24rem;
+    display: grid;
+    grid-template-columns: 5rem 5rem 5rem 5rem;
+    grid-template-rows: 3rem 3rem 3rem 3rem 3rem;
+    column-gap: 10px;
+    row-gap: 20px;
+    background-color: var(--keypad);
+    padding: 30px 22px;
+    border-radius: 6px;
+}
+.key{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-key);
+    color: var(--text-color);
+    border-radius: 6px;
+    filter:drop-shadow(0px 4px var(--primary-keyshadow));
+    font-size: 1.2rem;
+    cursor: pointer;
+    border: none;
+    font-family: var(--font);
+    font-weight: 700;
+}
+#highlight{
+    background-color: var(--highligted-keybg);
+    color: var(--text-color1);
+    filter:drop-shadow(0px 4px var(--highligted-keyshadow));
+}
+#reset{
+    background-color: var(--highligted-keybg);
+    color: var(--text-color1);
+    filter:drop-shadow(0px 4px var(--highligted-keyshadow));
+    font-size: 1rem;
+    grid-column: 1/3;
+}
+#equal{
+    background-color: var(--hightligted-key);
+    color: var(--text-color1);
+    filter:drop-shadow(0px 4px var(--hightligted-shadow));   
+    grid-column: 3/5;
+ 
+}
+
+@media screen and (max-width:414px) {
+    body{
+        height: 90vh;
+        display: flex;
+        align-items: center;
+        overflow-y:hidden;
+    }
+    .calculator{
+        width: 21rem;
+    }
+    .calculator-mid input{
+        width: 21rem;
+        height: 5rem;
+        margin: 30px 0px;
+    }
+    .calculator-buttons{
+        width: 21rem;
+        height: 27rem;
+        grid-template-columns:repeat(4, 4rem);
+        grid-template-rows: repeat(5,3.5rem);
+        row-gap: 22px;
+    }
+    .key{
+        
+    }
+}
